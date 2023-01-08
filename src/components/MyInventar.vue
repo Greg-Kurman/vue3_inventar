@@ -17,7 +17,7 @@
             <div class="body_inner__right">
 
               <MyModal v-bind:open="this.open" v-on:openM="openMod()" />
-              <MyItem @:click="openMod()" v-for="item in items" v-bind:color="item.color" v-bind:key="item.id" />
+              <MyItem @:click="openMod()" v-for="item in items" v-bind:color="item.color" v-bind:key="item.id" v-bind:count="item.count" />
 
 
             </div>
@@ -50,15 +50,18 @@ export default {
       items: [
         {
           id:1,
-          color: 'red'
+          color: 'red',
+          count: 5
         },
         {
           id:2,
-          color: 'green'
+          color: 'green',
+          count: 2
         },
         {
           id:3,
-          color: 'purple'
+          color: 'purple',
+          count: 3
         }
       ]
 

@@ -1,7 +1,7 @@
 <template>
     <div class="myItem">
         <div class="myItem_img">
-            <img src="`../assets/${{color}}.png`" alt="">
+            <img src="`../../assets/{{ color }}.png`" alt="">
             <div  v-bind:class="color"> </div>
             {{ color }}
         </div>
@@ -19,13 +19,16 @@ export default {
     props: {
         color: {
             type: String,
+        },
+        count: {
+            type: Number,
         }
     },
     emits: {
     },
     data() {
         return {
-            count: 5
+            
         }
     }
 
